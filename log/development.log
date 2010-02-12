@@ -906,3 +906,393 @@ Processing PhotosController#show (for 127.0.0.1 at 2010-02-12 03:15:35) [GET]
 Rendering template within layouts/photos
 Rendering photos/show
 Completed in 50ms (View: 24, DB: 3) | 200 OK [http://localhost/photos/6]
+  [4;36;1mSQL (3.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePhotos (20100212011851)
+Migrating to AddDateCreatedToPhotos (20100212014457)
+Migrating to AddUnColoneImageToPhotos (20100212034346)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (345.2ms)[0m   [0mALTER TABLE "photos" ADD "fichier" blob[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100212034346')[0m
+  [4;35;1mSQL (3.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_list("photos")[0m
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-02-12 04:21:57) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 364ms (View: 339, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-02-12 04:22:48) [POST]
+  Parameters: {"photo"=>{"date_created(1i)"=>"2010", "date_created(2i)"=>"2", "date_created(3i)"=>"12", "description"=>"logo de ruby", "fichier"=>#<File:/tmp/RackMultipart.935.0>, "filename"=>"rails.png"}, "commit"=>"Create", "authenticity_token"=>"dVGEeUTdrG02UzOHuIargeV7Fj1paOFn/bHKyPrOaTA="}
+
+NoMethodError (private method `gsub' called for #<File:/tmp/RackMultipart.935.0>):
+  /usr/local/lib/ruby/1.8/delegate.rb:268:in `method_missing'
+  app/controllers/photos_controller.rb:43:in `new'
+  app/controllers/photos_controller.rb:43:in `create'
+
+Rendered rescues/_trace (146.8ms)
+Rendered rescues/_request_and_response (6.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-02-12 04:24:34) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 369ms (View: 345, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-02-12 04:24:52) [POST]
+  Parameters: {"photo"=>{"date_created(1i)"=>"2010", "date_created(2i)"=>"2", "date_created(3i)"=>"12", "description"=>"logo", "fichier"=>#<File:/tmp/RackMultipart.936.0>, "filename"=>"rails.png"}, "commit"=>"Create", "authenticity_token"=>"dVGEeUTdrG02UzOHuIargeV7Fj1paOFn/bHKyPrOaTA="}
+
+NoMethodError (private method `gsub' called for #<File:/tmp/RackMultipart.936.0>):
+  /usr/local/lib/ruby/1.8/delegate.rb:268:in `method_missing'
+  app/controllers/photos_controller.rb:43:in `new'
+  app/controllers/photos_controller.rb:43:in `create'
+
+Rendered rescues/_trace (148.1ms)
+Rendered rescues/_request_and_response (7.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-02-12 04:36:20) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 78ms (View: 56, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-02-12 04:36:26) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 104ms (View: 37, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-02-12 04:36:29) [POST]
+  Parameters: {"photo"=>{"date_created(1i)"=>"2010", "date_created(2i)"=>"2", "date_created(3i)"=>"12", "description"=>"logo", "fichier"=>#<File:/tmp/RackMultipart.936.1>, "filename"=>"rails.png"}, "commit"=>"Create", "authenticity_token"=>"dVGEeUTdrG02UzOHuIargeV7Fj1paOFn/bHKyPrOaTA="}
+
+NoMethodError (private method `gsub' called for #<File:/tmp/RackMultipart.936.1>):
+  /usr/local/lib/ruby/1.8/delegate.rb:268:in `method_missing'
+  app/controllers/photos_controller.rb:43:in `new'
+  app/controllers/photos_controller.rb:43:in `create'
+
+Rendered rescues/_trace (475.0ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-02-12 04:39:19) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 465ms (View: 436, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-02-12 04:39:40) [POST]
+  Parameters: {"photo"=>{"date_created(1i)"=>"2010", "date_created(2i)"=>"2", "date_created(3i)"=>"12", "description"=>"logo", "fichier"=>"rails.png", "filename"=>"rails.png"}, "commit"=>"Create", "authenticity_token"=>"dVGEeUTdrG02UzOHuIargeV7Fj1paOFn/bHKyPrOaTA="}
+  [4;36;1mPhoto Create (4.0ms)[0m   [0;1mINSERT INTO "photos" ("updated_at", "date_created", "description", "filename", "fichier", "created_at") VALUES('2010-02-12 04:39:40', '2010-02-12', 'logo', 'rails.png', 'rails.png', '2010-02-12 04:39:40')[0m
+Redirected to http://localhost:3000/photos/7
+Completed in 76ms (DB: 4) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-02-12 04:39:40) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mPhoto Load (1.5ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 7) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+
+ActionView::TemplateError (undefined local variable or method `photo' for #<ActionView::Base:0x343a4b0>) on line #15 of app/views/photos/show.html.erb:
+12:   <b>Date Created:</b>
+13:   <%=h @photo.date_created %>
+14: </p>
+15: <p><%= url_for(:action => "get_fichier", :id => photo.id) %></p>
+16: 
+17: 
+18: 
+
+    app/views/photos/show.html.erb:15
+    app/controllers/photos_controller.rb:18:in `show'
+
+Rendered rescues/_trace (182.4ms)
+Rendered rescues/_request_and_response (11.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-02-12 04:40:49) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mPhoto Load (1.6ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 7) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 74ms (View: 33, DB: 2) | 200 OK [http://localhost/photos/7]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-02-12 04:40:52) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mPhoto Load (1.9ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 7) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 56ms (View: 27, DB: 2) | 200 OK [http://localhost/photos/7]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-02-12 04:40:54) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mPhoto Load (1.7ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 7) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 74ms (View: 27, DB: 2) | 200 OK [http://localhost/photos/7]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-02-12 04:42:00) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mPhoto Load (1.6ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 7) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+
+ActionView::TemplateError (undefined local variable or method `photo' for #<ActionView::Base:0x331d4ec>) on line #15 of app/views/photos/show.html.erb:
+12:   <b>Date Created:</b>
+13:   <%=h @photo.date_created %>
+14: </p>
+15: <p><img src="<%= url_for(:action => "get_fichier", :id => photo.id) %>" height="100" /></p>
+16: 
+17: 
+18: 
+
+    app/views/photos/show.html.erb:15
+    app/controllers/photos_controller.rb:18:in `show'
+
+Rendered rescues/_trace (407.3ms)
+Rendered rescues/_request_and_response (2.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-02-12 04:42:06) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mPhoto Load (1.5ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 7) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+
+ActionView::TemplateError (undefined local variable or method `photo' for #<ActionView::Base:0x33ac87c>) on line #15 of app/views/photos/show.html.erb:
+12:   <b>Date Created:</b>
+13:   <%=h @photo.date_created %>
+14: </p>
+15: <p><img src="<%= url_for(:action => "get_fichier", :id => photo.id) %>" height="100" /></p>
+16: 
+17: 
+18: 
+
+    app/views/photos/show.html.erb:15
+    app/controllers/photos_controller.rb:18:in `show'
+
+Rendered rescues/_trace (567.1ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-02-12 04:43:20) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mPhoto Load (1.5ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 7) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 87ms (View: 29, DB: 2) | 200 OK [http://localhost/photos/7]
+
+
+Processing PhotosController#get_fichier (for 127.0.0.1 at 2010-02-12 04:43:20) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mPhoto Load (1.5ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 7) [0m
+Sending data 
+Completed in 99ms (View: 2, DB: 1) | 200 OK [http://localhost/photos/get_fichier/7]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-02-12 04:43:23) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mPhoto Load (1.8ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 7) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 41ms (View: 13, DB: 2) | 200 OK [http://localhost/photos/7]
+
+
+Processing PhotosController#get_fichier (for 127.0.0.1 at 2010-02-12 04:43:23) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mPhoto Load (1.9ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 7) [0m
+Sending data 
+Completed in 101ms (View: 2, DB: 2) | 200 OK [http://localhost/photos/get_fichier/7]
+
+
+Processing PhotosController#get_fichier (for 127.0.0.1 at 2010-02-12 04:43:32) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mPhoto Load (1.9ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 7) [0m
+Sending data 
+Completed in 39ms (View: 3, DB: 2) | 200 OK [http://localhost/photos/get_fichier/7]
+
+
+Processing PhotosController#get_fichier (for 127.0.0.1 at 2010-02-12 04:44:45) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mPhoto Load (1.5ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 7) [0m
+Sending data 
+Completed in 28ms (View: 2, DB: 2) | 200 OK [http://localhost/photos/get_fichier/7]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-12 04:45:04) [GET]
+
+ActionController::RoutingError (No route matches "/photos/photos/get_fichier/7" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#get_fichier (for 127.0.0.1 at 2010-02-12 04:45:18) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mPhoto Load (1.5ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 7) [0m
+Sending data 
+Completed in 42ms (View: 2, DB: 2) | 200 OK [http://localhost/photos/get_fichier/7]
+
+
+Processing PhotosController#get_fichier (for 127.0.0.1 at 2010-02-12 04:45:48) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mPhoto Load (1.5ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 7) [0m
+Sending data 
+Completed in 34ms (View: 2, DB: 2) | 200 OK [http://localhost/photos/get_fichier/7]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-12 04:46:29) [GET]
+
+ActionController::RoutingError (No route matches "/photos/photos/get_fichier/7" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#get_fichier (for 127.0.0.1 at 2010-02-12 04:46:47) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mPhoto Load (2.0ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 7) [0m
+Sending data 
+Completed in 47ms (View: 2, DB: 2) | 200 OK [http://localhost/photos/get_fichier/7]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-02-12 04:49:23) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 358ms (View: 333, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-02-12 04:49:29) [POST]
+  Parameters: {"photo"=>{"date_created(1i)"=>"2010", "date_created(2i)"=>"2", "date_created(3i)"=>"12", "description"=>"logo", "fichier"=>"rails.png", "filename"=>"rails.png"}, "commit"=>"Create", "authenticity_token"=>"dVGEeUTdrG02UzOHuIargeV7Fj1paOFn/bHKyPrOaTA="}
+  [4;36;1mPhoto Create (2.4ms)[0m   [0;1mINSERT INTO "photos" ("updated_at", "date_created", "description", "filename", "fichier", "created_at") VALUES('2010-02-12 04:49:29', '2010-02-12', 'logo', 'rails.png', 'rails.png', '2010-02-12 04:49:29')[0m
+Redirected to http://localhost:3000/photos/8
+Completed in 57ms (DB: 2) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-02-12 04:49:29) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mPhoto Load (1.9ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 8) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 97ms (View: 40, DB: 2) | 200 OK [http://localhost/photos/8]
+
+
+Processing PhotosController#get_fichier (for 127.0.0.1 at 2010-02-12 04:49:30) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mPhoto Load (1.9ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 8) [0m
+Sending data 
+Completed in 29ms (View: 2, DB: 2) | 200 OK [http://localhost/photos/get_fichier/8]
+
+
+Processing PhotosController#get_fichier (for 127.0.0.1 at 2010-02-12 04:49:54) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mPhoto Load (8.9ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 8) [0m
+Sending data 
+Completed in 37ms (View: 2, DB: 9) | 200 OK [http://localhost/photos/get_fichier/8]
+  [4;36;1mPhoto Load (5.3ms)[0m   [0;1mSELECT * FROM "photos" [0m
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-02-12 04:57:29) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+
+ActionView::TemplateError (undefined local variable or method `‘update’' for #<ActionView::Base:0x258d3f4>) on line #3 of app/views/photos/new.html.erb:
+1: <h1>New photo</h1>
+2: 
+3: <% form_for :action => ‘update’, :id => @photo, :html => {:multipart => true} do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/photos/new.html.erb:3
+    app/controllers/photos_controller.rb:29:in `new'
+
+Rendered rescues/_trace (373.1ms)
+Rendered rescues/_request_and_response (5.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-02-12 04:58:38) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+
+ActionView::TemplateError (undefined method `errors' for #<Hash:0x220c248>) on line #4 of app/views/photos/new.html.erb:
+1: <h1>New photo</h1>
+2: 
+3: <% form_for :id => @photo, :html => {:multipart => true} do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+7:     <%= f.label :filename %><br />
+
+    app/views/photos/new.html.erb:4
+    app/views/photos/new.html.erb:3
+    app/controllers/photos_controller.rb:29:in `new'
+
+Rendered rescues/_trace (371.1ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-02-12 04:58:42) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+
+ActionView::TemplateError (undefined method `errors' for #<Hash:0x23bd894>) on line #4 of app/views/photos/new.html.erb:
+1: <h1>New photo</h1>
+2: 
+3: <% form_for :id => @photo, :html => {:multipart => true} do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+7:     <%= f.label :filename %><br />
+
+    app/views/photos/new.html.erb:4
+    app/views/photos/new.html.erb:3
+    app/controllers/photos_controller.rb:29:in `new'
+
+Rendered rescues/_trace (366.5ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-02-12 04:59:00) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 522ms (View: 486, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-02-12 04:59:32) [POST]
+  Parameters: {"photo"=>{"date_created(1i)"=>"2010", "date_created(2i)"=>"2", "date_created(3i)"=>"12", "description"=>"logo", "fichier"=>#<File:/tmp/RackMultipart.947.0>, "filename"=>"rails.png"}, "commit"=>"Create", "authenticity_token"=>"dVGEeUTdrG02UzOHuIargeV7Fj1paOFn/bHKyPrOaTA="}
+
+NoMethodError (private method `gsub' called for #<File:/tmp/RackMultipart.947.0>):
+  /usr/local/lib/ruby/1.8/delegate.rb:268:in `method_missing'
+  app/controllers/photos_controller.rb:43:in `new'
+  app/controllers/photos_controller.rb:43:in `create'
+
+Rendered rescues/_trace (186.5ms)
+Rendered rescues/_request_and_response (3.5ms)
+Rendering rescues/layout (internal_server_error)
