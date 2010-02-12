@@ -172,3 +172,162 @@ Processing PhotosController#new (for 127.0.0.1 at 2010-02-12 01:21:14) [GET]
 Rendering template within layouts/photos
 Rendering photos/new
 Completed in 227ms (View: 196, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-02-12 01:25:13) [POST]
+  Parameters: {"photo"=>{"description"=>"Description de la photo 1", "filename"=>"photo01.jpg"}, "commit"=>"Create", "authenticity_token"=>"dVGEeUTdrG02UzOHuIargeV7Fj1paOFn/bHKyPrOaTA="}
+  [4;36;1mPhoto Create (2.9ms)[0m   [0;1mINSERT INTO "photos" ("updated_at", "description", "filename", "created_at") VALUES('2010-02-12 01:25:13', 'Description de la photo 1', 'photo01.jpg', '2010-02-12 01:25:13')[0m
+Redirected to http://localhost:3000/photos/1
+Completed in 245ms (DB: 3) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-02-12 01:25:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPhoto Load (1.5ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 122ms (View: 92, DB: 2) | 200 OK [http://localhost/photos/1]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-02-12 01:25:17) [GET]
+  [4;36;1mPhoto Load (1.8ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 105ms (View: 82, DB: 2) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-02-12 01:26:45) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 85ms (View: 42, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-02-12 01:27:06) [POST]
+  Parameters: {"photo"=>{"description"=>"Description de la photo 2", "filename"=>"photo02.jpg"}, "commit"=>"Create", "authenticity_token"=>"dVGEeUTdrG02UzOHuIargeV7Fj1paOFn/bHKyPrOaTA="}
+  [4;35;1mPhoto Create (1.5ms)[0m   [0mINSERT INTO "photos" ("updated_at", "description", "filename", "created_at") VALUES('2010-02-12 01:27:06', 'Description de la photo 2', 'photo02.jpg', '2010-02-12 01:27:06')[0m
+Redirected to http://localhost:3000/photos/2
+Completed in 76ms (DB: 1) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-02-12 01:27:06) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPhoto Load (1.4ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 2) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 70ms (View: 18, DB: 1) | 200 OK [http://localhost/photos/2]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-02-12 01:27:10) [GET]
+  [4;35;1mPhoto Load (2.7ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 352ms (View: 322, DB: 3) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-02-12 01:27:12) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 76ms (View: 19, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-02-12 01:27:37) [POST]
+  Parameters: {"photo"=>{"description"=>"Description de la photo 3", "filename"=>"photo03.jpg"}, "commit"=>"Create", "authenticity_token"=>"dVGEeUTdrG02UzOHuIargeV7Fj1paOFn/bHKyPrOaTA="}
+  [4;36;1mPhoto Create (1.4ms)[0m   [0;1mINSERT INTO "photos" ("updated_at", "description", "filename", "created_at") VALUES('2010-02-12 01:27:37', 'Description de la photo 3', 'photo03.jpg', '2010-02-12 01:27:37')[0m
+Redirected to http://localhost:3000/photos/3
+Completed in 77ms (DB: 1) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-02-12 01:27:37) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPhoto Load (8.4ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 3) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 75ms (View: 16, DB: 8) | 200 OK [http://localhost/photos/3]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-02-12 01:27:40) [GET]
+  [4;36;1mPhoto Load (3.0ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 98ms (View: 75, DB: 3) | 200 OK [http://localhost/photos]
+  [4;36;1mSQL (6.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mPhoto Create (12.0ms)[0m   [0;1mINSERT INTO "photos" ("updated_at", "description", "filename", "created_at") VALUES('2010-02-12 01:52:27', 'Our old cat Willie', 'willie.jpg', '2010-02-12 01:52:27')[0m
+  [4;35;1mPhoto Create (2.4ms)[0m   [0mINSERT INTO "photos" ("updated_at", "description", "filename", "created_at") VALUES('2010-02-12 01:54:11', 'Our cat Boop', 'Kitten.jpg', '2010-02-12 01:54:11')[0m
+  [4;36;1mSQL (4.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mPhoto Load (2.7ms)[0m   [0mSELECT * FROM "photos" [0m
+  [4;36;1mPhoto Load (36.7ms)[0m   [0;1mSELECT * FROM "photos" LIMIT 1[0m
+  [4;35;1mPhoto Load (3.4ms)[0m   [0mSELECT * FROM "photos" WHERE (filename = 'photo03.jpg') LIMIT 1[0m
+  [4;36;1mPhoto Load (3.8ms)[0m   [0;1mSELECT * FROM "photos" WHERE (filename = 'photo03.jpg') LIMIT 1[0m
+  [4;35;1mPhoto Load (36.7ms)[0m   [0mSELECT * FROM "photos" WHERE (filename = 'photo03.jpg') LIMIT 1[0m
+  [4;36;1mPhoto Update (14.4ms)[0m   [0;1mUPDATE "photos" SET "filename" = 'boop.jpg', "updated_at" = '2010-02-12 01:58:55' WHERE "id" = 3[0m
+  [4;35;1mPhoto Load (6.8ms)[0m   [0mSELECT * FROM "photos" [0m
+  [4;36;1mPhoto Load (24.9ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+  [4;35;1mPhoto Load (15.6ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 3) [0m
+  [4;36;1mPhoto Load (8.7ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 3) [0m
+  [4;35;1mPhoto Load (23.4ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 3) [0m
+  [4;36;1mPhoto Load (2.0ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 3) [0m
+  [4;35;1mPhoto Delete all (6.1ms)[0m   [0mDELETE FROM "photos" WHERE ("id" IN (3)) [0m
+  [4;36;1mPhoto Load (2.5ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 3) [0m
+  [4;35;1mPhoto Load (36.6ms)[0m   [0mSELECT * FROM "photos" [0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePhotos (20100212011851)
+Migrating to AddDateCreatedToPhotos (20100212014457)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mALTER TABLE "photos" ADD "date_created" date[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100212014457')[0m
+  [4;35;1mSQL (1.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (3.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mPRAGMA index_list("photos")[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-02-12 02:07:16) [GET]
+  [4;36;1mPhoto Load (4.2ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 278ms (View: 224, DB: 4) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-02-12 02:07:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPhoto Load (1.5ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+Rendering template within layouts/photos
+Rendering photos/edit
+Completed in 112ms (View: 65, DB: 1) | 200 OK [http://localhost/photos/1/edit]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-02-12 02:07:30) [GET]
+  [4;36;1mPhoto Load (5.5ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 144ms (View: 92, DB: 5) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-02-12 02:07:33) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 105ms (View: 41, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-02-12 02:07:40) [GET]
+  [4;35;1mPhoto Load (3.2ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 361ms (View: 339, DB: 3) | 200 OK [http://localhost/photos]
