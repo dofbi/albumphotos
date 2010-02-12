@@ -331,3 +331,360 @@ Processing PhotosController#index (for 127.0.0.1 at 2010-02-12 02:07:40) [GET]
 Rendering template within layouts/photos
 Rendering photos/index
 Completed in 361ms (View: 339, DB: 3) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-02-12 02:12:15) [GET]
+  [4;36;1mPhoto Load (3.6ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+
+ActionView::TemplateError (undefined method `ddate_created' for #<Photo:0x2561448>) on line #13 of app/views/photos/index.html.erb:
+10:   <tr>
+11:     <td><%=h photo.filename %></td>
+12:     <td><%=h photo.description %></td>
+13: 	<td><%=h photo.ddate_created %></td>
+14:     <td><%= link_to 'Show', photo %></td>
+15:     <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
+16:     <td><%= link_to 'Destroy', photo, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/photos/index.html.erb:13
+    app/views/photos/index.html.erb:9:in `each'
+    app/views/photos/index.html.erb:9
+    app/controllers/photos_controller.rb:7:in `index'
+
+Rendered rescues/_trace (525.5ms)
+Rendered rescues/_request_and_response (5.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-02-12 02:12:19) [GET]
+  [4;35;1mPhoto Load (7.5ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+
+ActionView::TemplateError (undefined method `ddate_created' for #<Photo:0x220e82c>) on line #13 of app/views/photos/index.html.erb:
+10:   <tr>
+11:     <td><%=h photo.filename %></td>
+12:     <td><%=h photo.description %></td>
+13: 	<td><%=h photo.ddate_created %></td>
+14:     <td><%= link_to 'Show', photo %></td>
+15:     <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
+16:     <td><%= link_to 'Destroy', photo, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/photos/index.html.erb:13
+    app/views/photos/index.html.erb:9:in `each'
+    app/views/photos/index.html.erb:9
+    app/controllers/photos_controller.rb:7:in `index'
+
+Rendered rescues/_trace (283.4ms)
+Rendered rescues/_request_and_response (2.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-02-12 02:12:22) [GET]
+  [4;36;1mPhoto Load (3.3ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+
+ActionView::TemplateError (undefined method `ddate_created' for #<Photo:0x25220e0>) on line #13 of app/views/photos/index.html.erb:
+10:   <tr>
+11:     <td><%=h photo.filename %></td>
+12:     <td><%=h photo.description %></td>
+13: 	<td><%=h photo.ddate_created %></td>
+14:     <td><%= link_to 'Show', photo %></td>
+15:     <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
+16:     <td><%= link_to 'Destroy', photo, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/photos/index.html.erb:13
+    app/views/photos/index.html.erb:9:in `each'
+    app/views/photos/index.html.erb:9
+    app/controllers/photos_controller.rb:7:in `index'
+
+Rendered rescues/_trace (542.5ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-02-12 02:14:36) [GET]
+  [4;35;1mPhoto Load (23.5ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 245ms (View: 190, DB: 24) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-02-12 02:15:26) [GET]
+  [4;36;1mPhoto Load (5.1ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 140ms (View: 103, DB: 5) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-02-12 02:15:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPhoto Load (1.7ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+Rendering template within layouts/photos
+Rendering photos/edit
+Completed in 100ms (View: 75, DB: 2) | 200 OK [http://localhost/photos/1/edit]
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-02-12 02:16:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPhoto Load (1.5ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+Rendering template within layouts/photos
+Rendering photos/edit
+
+ActionView::TemplateError (undefined method `text_date' for #<ActionView::Helpers::FormBuilder:0x331f79c>) on line #16 of app/views/photos/edit.html.erb:
+13:   </p>
+14:   <p>
+15:     <%= f.label :date_created %><br />
+16:     <%= f.text_date :date_created %>
+17:   </p>
+18:   <p>
+19:     <%= f.submit 'Update' %>
+
+    app/views/photos/edit.html.erb:16
+    app/views/photos/edit.html.erb:3
+
+Rendered rescues/_trace (600.8ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-02-12 02:17:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPhoto Load (1.5ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+Rendering template within layouts/photos
+Rendering photos/edit
+
+ActionView::TemplateError (undefined method `date' for #<ActionView::Helpers::FormBuilder:0x3380074>) on line #16 of app/views/photos/edit.html.erb:
+13:   </p>
+14:   <p>
+15:     <%= f.label :date_created %><br />
+16:     <%= f.date :date_created %>
+17:   </p>
+18:   <p>
+19:     <%= f.submit 'Update' %>
+
+    app/views/photos/edit.html.erb:16
+    app/views/photos/edit.html.erb:3
+
+Rendered rescues/_trace (648.6ms)
+Rendered rescues/_request_and_response (4.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-02-12 02:17:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPhoto Load (1.4ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+Rendering template within layouts/photos
+Rendering photos/edit
+
+ActionView::TemplateError (undefined method `date' for #<ActionView::Helpers::FormBuilder:0x34287c4>) on line #16 of app/views/photos/edit.html.erb:
+13:   </p>
+14:   <p>
+15:     <%= f.label :date_created %><br />
+16:     <%= f.date :date_created %>
+17:   </p>
+18:   <p>
+19:     <%= f.submit 'Update' %>
+
+    app/views/photos/edit.html.erb:16
+    app/views/photos/edit.html.erb:3
+
+Rendered rescues/_trace (251.5ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-02-12 02:24:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPhoto Load (1.9ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+Rendering template within layouts/photos
+Rendering photos/edit
+
+ActionView::TemplateError (undefined method `select_date' for #<ActionView::Helpers::FormBuilder:0x34d0e9c>) on line #16 of app/views/photos/edit.html.erb:
+13:   </p>
+14:   <p>
+15:     <%= f.label :date_created %><br />
+16:     <%= f.select_date :date_created %>
+17:   </p>
+18:   <p>
+19:     <%= f.submit 'Update' %>
+
+    app/views/photos/edit.html.erb:16
+    app/views/photos/edit.html.erb:3
+
+Rendered rescues/_trace (342.4ms)
+Rendered rescues/_request_and_response (2.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-02-12 02:24:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPhoto Load (1.5ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+Rendering template within layouts/photos
+Rendering photos/edit
+
+ActionView::TemplateError (undefined method `select_date' for #<ActionView::Helpers::FormBuilder:0x329699c>) on line #16 of app/views/photos/edit.html.erb:
+13:   </p>
+14:   <p>
+15:     <%= f.label :date_created %><br />
+16:     <%= f.select_date :date_created %>
+17:   </p>
+18:   <p>
+19:     <%= f.submit 'Update' %>
+
+    app/views/photos/edit.html.erb:16
+    app/views/photos/edit.html.erb:3
+
+Rendered rescues/_trace (337.4ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-02-12 02:25:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPhoto Load (2.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+Rendering template within layouts/photos
+Rendering photos/edit
+Completed in 159ms (View: 77, DB: 2) | 200 OK [http://localhost/photos/1/edit]
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-02-12 02:25:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPhoto Load (1.5ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+Rendering template within layouts/photos
+Rendering photos/edit
+Completed in 1471ms (View: 1418, DB: 1) | 200 OK [http://localhost/photos/1/edit]
+
+
+Processing PhotosController#update (for 127.0.0.1 at 2010-02-12 02:25:51) [PUT]
+  Parameters: {"photo"=>{"date_created(1i)"=>"2010", "date_created(2i)"=>"2", "date_created(3i)"=>"12", "description"=>"Description de la photo 1", "filename"=>"photo01.jpg"}, "commit"=>"Update", "authenticity_token"=>"dVGEeUTdrG02UzOHuIargeV7Fj1paOFn/bHKyPrOaTA=", "id"=>"1"}
+  [4;35;1mPhoto Load (1.4ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+  [4;36;1mPhoto Update (7.7ms)[0m   [0;1mUPDATE "photos" SET "updated_at" = '2010-02-12 02:25:51', "date_created" = '2010-02-12' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/photos/1
+Completed in 106ms (DB: 9) | 302 Found [http://localhost/photos/1]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-02-12 02:25:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPhoto Load (2.5ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 105ms (View: 49, DB: 3) | 200 OK [http://localhost/photos/1]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-02-12 02:25:55) [GET]
+  [4;36;1mPhoto Load (4.8ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 200ms (View: 147, DB: 5) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-02-12 02:25:59) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPhoto Load (1.9ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 2) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 107ms (View: 37, DB: 2) | 200 OK [http://localhost/photos/2]
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-02-12 02:26:03) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPhoto Load (1.8ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 2) [0m
+Rendering template within layouts/photos
+Rendering photos/edit
+Completed in 210ms (View: 95, DB: 2) | 200 OK [http://localhost/photos/2/edit]
+
+
+Processing PhotosController#update (for 127.0.0.1 at 2010-02-12 02:26:08) [PUT]
+  Parameters: {"photo"=>{"date_created(1i)"=>"2010", "date_created(2i)"=>"2", "date_created(3i)"=>"12", "description"=>"Description de la photo 2", "filename"=>"photo02.jpg"}, "commit"=>"Update", "authenticity_token"=>"dVGEeUTdrG02UzOHuIargeV7Fj1paOFn/bHKyPrOaTA=", "id"=>"2"}
+  [4;35;1mPhoto Load (1.8ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 2) [0m
+  [4;36;1mPhoto Update (4.1ms)[0m   [0;1mUPDATE "photos" SET "updated_at" = '2010-02-12 02:26:08', "date_created" = '2010-02-12' WHERE "id" = 2[0m
+Redirected to http://localhost:3000/photos/2
+Completed in 114ms (DB: 6) | 302 Found [http://localhost/photos/2]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-02-12 02:26:08) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPhoto Load (3.8ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 2) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 131ms (View: 40, DB: 4) | 200 OK [http://localhost/photos/2]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-02-12 02:26:11) [GET]
+  [4;36;1mPhoto Load (3.4ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 126ms (View: 103, DB: 3) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-02-12 02:26:15) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPhoto Load (3.7ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 4) [0m
+Rendering template within layouts/photos
+Rendering photos/edit
+Completed in 908ms (View: 848, DB: 4) | 200 OK [http://localhost/photos/4/edit]
+
+
+Processing PhotosController#update (for 127.0.0.1 at 2010-02-12 02:26:19) [PUT]
+  Parameters: {"photo"=>{"date_created(1i)"=>"2010", "date_created(2i)"=>"2", "date_created(3i)"=>"12", "description"=>"Our old cat Willie", "filename"=>"willie.jpg"}, "commit"=>"Update", "authenticity_token"=>"dVGEeUTdrG02UzOHuIargeV7Fj1paOFn/bHKyPrOaTA=", "id"=>"4"}
+  [4;36;1mPhoto Load (2.1ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 4) [0m
+  [4;35;1mPhoto Update (5.1ms)[0m   [0mUPDATE "photos" SET "updated_at" = '2010-02-12 02:26:19', "date_created" = '2010-02-12' WHERE "id" = 4[0m
+Redirected to http://localhost:3000/photos/4
+Completed in 128ms (DB: 7) | 302 Found [http://localhost/photos/4]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-02-12 02:26:19) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPhoto Load (4.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 4) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 103ms (View: 43, DB: 4) | 200 OK [http://localhost/photos/4]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-02-12 02:26:23) [GET]
+  [4;35;1mPhoto Load (10.4ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 178ms (View: 116, DB: 10) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-02-12 02:26:27) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mPhoto Load (2.0ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 5) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 84ms (View: 29, DB: 2) | 200 OK [http://localhost/photos/5]
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-02-12 02:26:33) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mPhoto Load (1.7ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 5) [0m
+Rendering template within layouts/photos
+Rendering photos/edit
+Completed in 157ms (View: 97, DB: 2) | 200 OK [http://localhost/photos/5/edit]
+
+
+Processing PhotosController#update (for 127.0.0.1 at 2010-02-12 02:26:36) [PUT]
+  Parameters: {"photo"=>{"date_created(1i)"=>"2010", "date_created(2i)"=>"2", "date_created(3i)"=>"12", "description"=>"Our cat Boop", "filename"=>"Kitten.jpg"}, "commit"=>"Update", "authenticity_token"=>"dVGEeUTdrG02UzOHuIargeV7Fj1paOFn/bHKyPrOaTA=", "id"=>"5"}
+  [4;36;1mPhoto Load (1.8ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 5) [0m
+  [4;35;1mPhoto Update (1.4ms)[0m   [0mUPDATE "photos" SET "updated_at" = '2010-02-12 02:26:36', "date_created" = '2010-02-12' WHERE "id" = 5[0m
+Redirected to http://localhost:3000/photos/5
+Completed in 120ms (DB: 3) | 302 Found [http://localhost/photos/5]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-02-12 02:26:36) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mPhoto Load (1.6ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 5) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 76ms (View: 19, DB: 2) | 200 OK [http://localhost/photos/5]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-02-12 02:26:39) [GET]
+  [4;35;1mPhoto Load (3.8ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 218ms (View: 126, DB: 4) | 200 OK [http://localhost/photos]
